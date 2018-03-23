@@ -1,0 +1,210 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+MAINMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)",                    ID_FILE_NEWI
+        MENUITEM "打开(&O)...",                 ID_FILE_OPENI
+        MENUITEM "保存(&S)",                    ID_FILE_SAVEI
+        MENUITEM "另存为(&A)...",               ID_FILE_OTHERSAVEI
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    ID_FILE_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM "坐标归位(&R)",                ID_EDIT_RESETPOINT
+        MENUITEM "填充地图(&F)",                ID_EDIT_FILL
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "1/1",                         ID_VIEW_1_1, CHECKED
+        MENUITEM "1/2",                         ID_VIEW_1_2
+        MENUITEM "2/1",                         ID_VIEW_2_1
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于(&A)...",                 ID_HELP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ABOUTBOX DIALOG DISCARDABLE  0, 0, 164, 157
+STYLE DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "关于"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确认",IDOK,105,133,50,14
+    LTEXT           "程序操作:",IDC_STATIC,21,17,37,8
+    LTEXT           "鼠标左键:上层地图\n鼠标右键:下层地图\n+Ctrl键:数据取反(设置阻挡)",
+                    IDC_STATIC,34,40,97,52
+    LTEXT           "——方寸",IDC_STATIC,120,106,43,11
+END
+
+CHOOSEMAPPIC DIALOG DISCARDABLE  0, 0, 246, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选择地图图片"
+FONT 9, "宋体"
+BEGIN
+    LISTBOX         IDC_CHOOSELIST,7,7,68,127,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确认",IDOK,134,149,50,14
+    PUSHBUTTON      "取消",IDCANCEL,189,149,50,14
+    CONTROL         "",IDC_DRAWPAGE,"Static",SS_GRAYFRAME,77,7,162,127
+END
+
+NEWMAP DIALOG DISCARDABLE  0, 0, 122, 131
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新建"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_W,75,14,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_H,75,31,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TID,65,51,22,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_CT,99,51,16,14
+    COMBOBOX        IDC_BACKCOLOR,69,82,46,75,CBS_DROPDOWNLIST | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "确定",IDOK,7,110,50,14
+    PUSHBUTTON      "取消",IDCANCEL,65,110,50,14
+    LTEXT           "地图宽",IDC_STATIC,15,17,25,8
+    LTEXT           "地图高",IDC_STATIC,15,34,25,8
+    LTEXT           "地图资源ID",IDC_STATIC,15,54,41,8
+    LTEXT           "地图背景颜色",IDC_STATIC,15,83,49,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    "ABOUTBOX", DIALOG
+    BEGIN
+        RIGHTMARGIN, 163
+        BOTTOMMARGIN, 147
+    END
+
+    "CHOOSEMAPPIC", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 163
+    END
+
+    "NEWMAP", DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 115
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 124
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+NEWMAP DLGINIT
+BEGIN
+    IDC_BACKCOLOR, 0x403, 5, 0
+0xd7b0, 0xabc9, "\000" 
+    IDC_BACKCOLOR, 0x403, 5, 0
+0xdaba, 0xabc9, "\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+1                       24      DISCARDABLE     "default1.bin"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+ICON                    ICON    DISCARDABLE     "项目1.ico"
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
